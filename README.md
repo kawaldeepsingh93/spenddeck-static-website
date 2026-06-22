@@ -14,7 +14,7 @@ Static marketing and legal site for the [SpendDeck](https://github.com/devkawal/
 
 Use these URLs after deploying:
 
-- **Privacy policy URL:** `https://your-domain.com/privacy.html`
+- **Privacy policy URL:** `https://kawaldeepsingh93.github.io/spenddeck-static-website/privacy.html`
 - **Contact email:** planetkawal@gmail.com
 - **App name:** SpendDeck
 - **Category:** Finance
@@ -40,16 +40,32 @@ npx serve .
 
 Open http://localhost:3000 (serve) or http://localhost:8080 (python).
 
-## Deploy
+## Deploy (GitHub Pages)
 
-This is a plain static site — no build step. Deploy to any static host:
+This is a plain static site — no build step. GitHub Actions deploys automatically on every push to `main`.
 
-- **GitHub Pages** — push repo, enable Pages on `main`
+### One-time setup
+
+1. Push this repo to GitHub (`kawaldeepsingh93/spenddeck-static-website`).
+2. Open **Settings → Pages** in the GitHub repo.
+3. Under **Build and deployment → Source**, choose **GitHub Actions**.
+4. Push to `main` (or run the **Deploy to GitHub Pages** workflow manually under **Actions**).
+
+After the workflow finishes, the site is live at:
+
+- **Home:** https://kawaldeepsingh93.github.io/spenddeck-static-website/
+- **Privacy:** https://kawaldeepsingh93.github.io/spenddeck-static-website/privacy.html
+- **Terms:** https://kawaldeepsingh93.github.io/spenddeck-static-website/terms.html
+
+### Custom domain (optional)
+
+Add a `CNAME` file with your domain (e.g. `spenddeck.app`), then configure DNS and enable the custom domain under **Settings → Pages**. Use `https://your-domain.com/privacy.html` in Play Console.
+
+### Other hosts
+
 - **Netlify** — drag-and-drop the folder or connect the repo
 - **Vercel** — `vercel deploy`
 - **Cloudflare Pages** — connect repo, no build command
-
-Point your custom domain (e.g. `spenddeck.app`) at the host and use `https://your-domain.com/privacy.html` in Play Console.
 
 ## Structure
 
